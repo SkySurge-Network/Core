@@ -1,0 +1,7 @@
+name: SurgeCore
+version: '${project.version}'
+main: skysurge.net.Main
+api-version: 1.19
+authors: [ Mason ]
+description: Skysurge core plugin
+website: skysurge.net
