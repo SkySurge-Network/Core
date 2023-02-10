@@ -1,13 +1,11 @@
 package skysurge.net.Database;
 
-import com.mongodb.*;
-import com.mongodb.client.MongoClients;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.connection.ConnectionPoolSettings;
-import com.zaxxer.hikari.HikariDataSource;
 import org.bson.Document;
-import skysurge.net.Main;
 
 public class Database {
 
@@ -16,7 +14,6 @@ public class Database {
     private MongoDatabase database;
     private MongoClientURI uri;
     private MongoCollection<Document> collection;
-    private HikariDataSource dataSource;
     private String databaseName = "SkySurge";
 
     public Database(String uri) {
