@@ -19,18 +19,19 @@ import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import skysurge.net.Main;
 
 public class Gui implements Listener {
     private final GuiPage[] pages = new GuiPage[100];
     private Map<UUID, GuiPage> viewing = new HashMap<>();
-    private final Main plugin;
+    private final Plugin plugin;
     private final Listener li;
 
     // Quantity of pages
     public int size = 0;
 
-    public Gui(Main plugin) {
+    public Gui(Plugin plugin) {
         this.plugin = plugin;
 
         // Event Listener
