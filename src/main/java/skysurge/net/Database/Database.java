@@ -11,7 +11,6 @@ import skysurge.net.Main;
 
 public class Database {
 
-    private Main main;
     private MongoClientOptions options;
     private MongoClient mongoClient;
     private MongoDatabase database;
@@ -20,8 +19,7 @@ public class Database {
     private HikariDataSource dataSource;
     private String databaseName = "SkySurge";
 
-    public Database(Main main, String uri) {
-        this.main = main;
+    public Database(String uri) {
 
         MongoClientOptions.Builder optionsBuilder = MongoClientOptions.builder().connectionsPerHost(100).maxWaitTime(100000);
         MongoClientURI clientURI = new MongoClientURI(uri, optionsBuilder);
