@@ -44,7 +44,15 @@ public class PlayerData {
         }
 
         public int getGems() {
-            return gems;
+            return gems == 0 ? 0 : gems;
+        }
+
+        public void addGems(int amount) {
+            this.gems += amount;
+        }
+
+        public void removeGems(int amount) {
+            this.gems -= amount;
         }
     }
 }
