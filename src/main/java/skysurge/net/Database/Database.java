@@ -25,4 +25,9 @@ public class Database {
         System.out.println("SkySurge | Mongo client has been connected!");
     }
 
+    public MongoCollection<Document> getCollection(String name) {
+        return this.mongoClient.getDatabase(databaseName).getCollection(name);
+    }
+
+
 }
